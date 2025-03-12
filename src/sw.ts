@@ -40,7 +40,7 @@ self.addEventListener('push', async (event) => {
   if ('showNotification' in self.registration){
     await self.registration.showNotification(title, options);
   }
-    new Notification(title, options);
+    // new Notification(title, options);
 });
 
 
