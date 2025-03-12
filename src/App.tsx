@@ -59,7 +59,7 @@ async  function sendNotification() {
     try {
       const registration = await navigator.serviceWorker.ready;
       const subs = await registration.pushManager.getSubscription();
-      console.log({ subs });
+      console.log({ subs , registration});
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(
