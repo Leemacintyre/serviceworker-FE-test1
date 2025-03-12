@@ -64,7 +64,7 @@ async  function sendNotification() {
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(
-          "BPs_1OoW7BpSARHd7L8F8PWMXjnE2oVO-DJw1N4ioj8ULcg9OFz0jFrQOxSaLPG3KHvwOqLpMH7SY0H2gTZzSIY",
+          import.meta.env.VITE_VAPID_PUBLIC_KEY,
         ),
       });
 
