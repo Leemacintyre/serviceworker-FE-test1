@@ -4,7 +4,6 @@ import './App.css'
 
 // Convert VAPID key to UInt8Array
 const urlBase64ToUint8Array = (base64String: string) => {
-  console.log("base64String", base64String);
   const padding = '='.repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding)
     .replace(/\-/g, '+')
@@ -64,7 +63,7 @@ async  function sendNotification() {
       const subscription = await registration.pushManager.subscribe({
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(
-          import.meta.env.VITE_VAPID_PUBLIC_KEY,
+          "BPs_1OoW7BpSARHd7L8F8PWMXjnE2oVO-DJw1N4ioj8ULcg9OFz0jFrQOxSaLPG3KHvwOqLpMH7SY0H2gTZzSIY",
         ),
       });
 
